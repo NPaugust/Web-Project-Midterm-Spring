@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CS204 MEMBER MANAGEMENT</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Member Table</h2>
+
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Included</th>
+    </tr>
+    <th:block th:each="member : ${members}">
+        <tr>
+            <td th:text="${member.memberId}"></td>
+            <td th:text="${member.name}"></td>
+            <td th:text="${member.surname}"></td>
+            <td th:text="${member.included}"></td>
+        </tr>
+    </th:block>
+</table>
+<p></p>
+<form method="post" action="/members/addMember" th:object="${member}">
+    <input type="text" name="memberId" placeholder="Enter id">
+    <input type="text" name="name" placeholder="Enter Name">
+    <input type="text" name="surname" placeholder="Enter Surname">
+    <input type="text" name="included" placeholder="Included true or false?">
+    <input type="submit" value="add new member">
+    <input type="submit" value="delete the member">
+</form>
+
+</body>
+</html>
