@@ -1,5 +1,7 @@
 
 # CS 204 Management Student 
+# PROJECT NOT COMPLETED 
+# PROJECT WILL BE COMPLETED SOON
 # Spring-boot APP 
 
 
