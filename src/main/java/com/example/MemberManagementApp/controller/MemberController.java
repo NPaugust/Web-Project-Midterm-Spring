@@ -3,6 +3,7 @@ package com.example.MemberManagementApp.controller;
 import com.example.MemberManagementApp.model.Member;
 import com.example.MemberManagementApp.repository.MemberRepository;
 import lombok.RequiredArgsConstructor;
+import org.hibernate.sql.Delete;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
+import static org.apache.tomcat.jni.Mmap.delete;
 
 @Controller
 @RequestMapping("/members")
@@ -52,11 +54,9 @@ public class MemberController {
                 new ResponseEntity<>(repository.save(member), HttpStatus.CREATED);
     }
 
-    @DeleteMapping("/{id}")
-    void deleteMemberById(@PathVariable String id){
-        repository.deleteById(id);
+    @DeleteMapping("/deleteMember/{memberId}")
+    public ResponseEntity<Long> deleteMember(@PathVariable(value = "id") Long memberID) {
+        return ResponseEntity.ok(memberID);
+    }
     }
 
-
-
-}

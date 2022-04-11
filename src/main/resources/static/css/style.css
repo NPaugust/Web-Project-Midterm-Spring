@@ -1,16 +1,28 @@
 table {
-    background-image:url(../images/alatoo1.png);
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+    width: 100%; /* Ширина таблицы */
+    border: 1px solid green; /* Рамка вокруг таблицы */
+    margin: auto; /* Выравниваем таблицу по центру окна  */
+}
+
+td {
+    text-align: center;
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: left;
+    text-align: center;
+    color: aliceblue;
     padding: 8px;
 }
+body{min-height: 100vh;
+    color: #281a4c;}
 
 tr:nth-child(even) {
-    background-color: #dddddd;
+    background-color: #281a4c;
+
+}
+footer {
+    background-color: dodgerblue;
+    padding: 20px 0;
+    color: aliceblue;
 }

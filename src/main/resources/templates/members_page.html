@@ -2,19 +2,24 @@
 <html xmlns:th="http:www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Member Management Page</title>
+    <title>CS204 Group Management Page</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+<div align="center">
+    <img  src="../images/Logo.png" width="100" height="111" alt="Фотография">
+    <p align="center">CS204 Group Members</p>
 <h2>List of members</h2>
 
+</div>
 <table>
     <tr>
         <th>Id</th>
         <th>Name</th>
         <th>Surname</th>
         <th>Included</th>
+        <th>Action</th>
     </tr>
     <th:block th:each="member : ${members}">
         <tr>
@@ -22,16 +27,26 @@
             <td th:text="${member.name}"></td>
             <td th:text="${member.surname}"></td>
             <td th:text="${member.included}"></td>
+            <td><button id="delete" name="delete" th:onclick th:method="delete">Remove</button></td>
         </tr>
     </th:block>
 </table>
 <p></p>
+<div align="center"></div>
 <form method="post" action="/members/addMember" th:object="${member}">
     <input type="text" name="memberId" placeholder="Enter id">
     <input type="text" name="name" placeholder="Enter Name">
     <input type="text" name="surname" placeholder="Enter Surname">
-    <input type="text" name="included" value="Included true or false">
+    <input type="text" name="included" placeholder="Present or absent">
     <input type="submit" value="Add new member">
+    <div class="columns download">
+        <p>
+            <a href="(CS-204 List)" accesskey="CTRL,P"class="button" download><i class="th block"></i>Download in PDF-File</a>
+        </p>
+
+        </p>
+    </div>
+
 </form>
 
 </body>
