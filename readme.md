@@ -1,10 +1,8 @@
-
 # CS 204 Management Student 
+Web App uses Spring and PostgreSQL. 
 
-# Spring-boot APP 
-
-
-Simple web-app for Midterm2022.Is used to mark students whether they are in or not. 
+# About project
+Is used to mark students whether they are in or not. 
 
 # Screenshots
   ![main](https://user-images.githubusercontent.com/72886935/162686395-3c3931b6-b610-46ee-82b8-808eb7510c5c.png)
