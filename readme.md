@@ -1,7 +1,6 @@
 
 # CS 204 Management Student 
-# PROJECT NOT COMPLETED 
-# PROJECT WILL BE COMPLETED SOON
+
 # Spring-boot APP 
 
 
@@ -10,6 +9,6 @@ Simple web-app for Midterm2022.Is used to mark students whether they are in or n
 # [Heroku](https://web-spring-avgustine.herokuapp.com/)
 
 # Frameworks 
-Spring, PosgreSQL
+Spring, PosgreSQL, JS, Java
 
 Done by Avgustine Chynarbekov
