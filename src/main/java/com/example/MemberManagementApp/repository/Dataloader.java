@@ -19,7 +19,9 @@ class DataLoader {
         repository.saveAll(List.of(
                 new Member("1", "Ruslan", "Isaev", "Present"),
                 new Member("2", "Avgustine", "Chynarbekov", "Absent"),
-                new Member("3", "Tretyi", "Lyiwnii", "Present")
+                new Member("3", "Erkhan", "Adenov", "Present"),
+                new Member("3", "Adil", "Ismailov", "Absent"),
+                new Member("5","Abdulaaziz", "Talantbekov", "Present")
         ));
     }
 }
